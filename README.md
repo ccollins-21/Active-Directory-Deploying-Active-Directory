@@ -4,7 +4,7 @@
 
 <h1>Deploying Active Directory in Azure</h1>
 
- ### [YouTube Demonstration](https://youtu.be) Coming Soon.
+ ### [YouTube Demonstration](https://youtu.be/Zrb_DDrI_p4)
 
 <h2>Description</h2>
 This project is a continuation of "Preparing Infrastructure in Azure" portion of Active Directory, so this project picks up where I left off. Here, I install AD on the domain controller, create a domain admin, and join the client VM to the domain.  <br/>

@@ -32,15 +32,15 @@ To start, in the DC (Domain Controller), bring up the Server Manager dashboard, 
 <img src="https://i.imgur.com/Hu1SI4S.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Here, click on "Add roles and features"> Next> Next> For server selection there should only be one to select: <br/>
+Here, click on "Add roles and features" > Next > Next > For server selection there should only be one to select: <br/>
 <img src="https://i.imgur.com/2aEzeqm.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Now, check "Active Directory Domain Services"> Click "Add Features":  <br/>
+Now, check "Active Directory Domain Services" > Click "Add Features":  <br/>
 <img src="https://i.imgur.com/pTu3pNB.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Select "Active Directory Domain Services"> Next> Next> Next> Now select "Restart the destination server automatically if required" and click "Install": <br/>
+Select "Active Directory Domain Services" > Next > Next > Next > Now select "Restart the destination server automatically if required" and click "Install": <br/>
 <img src="https://i.imgur.com/7QIfWrO.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
@@ -68,11 +68,11 @@ Now, we'll create an admin user. To do this, in the start search bar, search for
 <img src="https://i.imgur.com/ArS11GE.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Right click on "mydomain.com" and select "New"> "Organizational Unit" and name it EXACTLY "_EMPLOYEES" (In a future project we will run a script that uses this name to work). Do the same steps here to create an OU (Organizational Unit) named "_ADMINS":  <br/>
+Right click on "mydomain.com" and select "New" > "Organizational Unit" and name it EXACTLY "_EMPLOYEES" (In a future project we will run a script that uses this name to work). Do the same steps here to create an OU (Organizational Unit) named "_ADMINS":  <br/>
 <img src="https://i.imgur.com/LKndRfZ.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Next, create a new user in "_ADMINS" by right-clicking on "_ADMINS"> New> User and fill it out like so:  <br/>
+Next, create a new user in "_ADMINS" by right-clicking on "_ADMINS" > New > User and fill it out like so:  <br/>
 <img src="https://i.imgur.com/otH0WZ9.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
@@ -80,7 +80,7 @@ Then, create a password and uncheck "User must change password at next logon" an
 <img src="https://i.imgur.com/Bl1TDNe.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Jane Doe is now apart of the "_ADMINS" OU, but isn't actually an admin. To make her an admin right-click on her name> Properties> Member Of> Add...> Enter "domain admins"> Check Names> OK> Apply> OK:  <br/>
+Jane Doe is now apart of the "_ADMINS" OU, but isn't actually an admin. To make her an admin right-click on her name > Properties > Member Of > Add... > Enter "domain admins" > Check Names > OK > Apply > OK:  <br/>
 <img src="https://i.imgur.com/JNzV00w.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
@@ -88,7 +88,7 @@ Now, we can log out of DC and log back in using Jane's credentials:  <br/>
 <img src="https://i.imgur.com/hTRt4PJ.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-Once logged in, log into client-1 VM, if not already. Here I'll join this client to the domain by right clicking the start menu> Systems> Rename this PC (advanced)> Change> Select "Domain" and enter "mydomain.com" and hit "OK":  <br/>
+Once logged in, log into client-1 VM, if not already. Here I'll join this client to the domain by right-clicking the start menu > Systems > Rename this PC (advanced) > Change > Select "Domain" and enter "mydomain.com" and hit "OK":  <br/>
 <img src="https://i.imgur.com/Pj8kswj.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
@@ -96,7 +96,7 @@ It'll ask for an account with permission to join the domain. We can use our admi
 <img src="https://i.imgur.com/vm5DhNE.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
-After the restart, client-1 is now a member of the domain. To check, in the DC machine start seach bar, search for "Active Directory Users and Computers"> mydomain.com> Computers> client-1 should be listed:  <br/>
+After the restart, client-1 is now a member of the domain. To check, in the DC machine start seach bar, search for "Active Directory Users and Computers" > mydomain.com > Computers > client-1 should be listed:  <br/>
 <img src="https://i.imgur.com/jvU4PGD.png" height="80%" width="80%" alt="Setting Up in Azure"/>
 <br />
 <br />
